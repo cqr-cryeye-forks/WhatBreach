@@ -237,11 +237,6 @@ def grab_api_tokens():
                     )
                     results = {"username": username, "password": password}
                     json.dump(results, token)
-                else:
-                    item = lib.formatter.prompt(
-                        "you have not provided a token for {}, enter token".format(f.split("/")[-1]), lowercase=False
-                    )
-                    token.write(item.strip())
         with open(f.format(TOKENS_PATH)) as data:
             token_identifier = f.split("/")[-1]
             if "snusbase" in f:
