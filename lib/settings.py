@@ -220,9 +220,12 @@ def grab_api_tokens():
     grab API tokens from the stored data, this will be useful for when we add more APIs
     """
     tokens = {}
-    filenames = (
-        "{}/hunter.io", "{}/weleakinfo.com", "{}/haveibeenpwned.com", "{}/snusbase.com"
-    )
+    # filenames = (
+    #     "{}/hunter.io", "{}/weleakinfo.com", "{}/haveibeenpwned.com", "{}/snusbase.com"
+    # )
+    filenames = {
+        "{}/haveibeenpwned.com"
+    }
     if not os.path.exists(TOKENS_PATH):
         os.makedirs(TOKENS_PATH)
     for f in filenames:
